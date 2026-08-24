@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <style>
+        p{
+            background-color: black 
+        } 
+        .shiv{
+            text-align:center;
+        }
+        p, article{
+            width: 500px
+        }
+        div p {
+      color: green;
+}
+div p {
+color: green;
+}
+
+Syntax:
+h1 + p {
+color: purple;
+}
+h1 ~ p {
+color: orange;
+}
+
+    </style>
+</head>
+<body>
+    <h1 class="shiv"> Welcome to shivansh's world </h1>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sint quia, 
+        laboriosam quidem sunt dolorem, reprehenderit similique tempore rerum,
+         porro fugiat error deleniti qui exercitationem repudiandae accusantium quam incidunt corporis.</p>
+
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         At ratione harum esse illum. Corporis, quas iste ab consequuntur vitae delectus?</p>
+    
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat obcaecati quidem repellendus
+         nostrum quibusdam similique tempore aut ratione! Harum corrupti laborum rerum cupiditate repellendus officiis
+         porro aut ut ex, dolor pariatur alias obcaecati aliquid? Non ea blanditiis officia libero alias?</p>
+
+    <article id="article1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut saepe consectetur delectus eaque, 
+        tempora pariatur voluptas vero voluptatem necessitatibus cupiditate cumque consequatur sed repellendus nemo, est eos 
+        nihil beatae aliquid! Voluptatibus quasi odio cum quo quod tempora accusantium quaeratlaudantium recusandae 
+        eligendi architecto, fugit corrupti illo sed placeat nemo maiores.</article>
+
+    <div>
+    <p>This paragraph is green.</p>
+    </div>
+    <p>This paragraph is NOT green.</p>
+    
+    <div>
+<p>Direct child styled red.</p>
+<section>
+<p>Nested paragraph not affected.</p>
+</section>
+</div>
+
+<h1>Title</h1>
+<p>This paragraph is purple.</p>
+<p>This paragraph is NOT purple.</p>
+    
+<h1>Title</h1>
+<p>First paragraph orange.</p>
+<p>Second paragraph orange.</p>
+
+</body>
+</html>
