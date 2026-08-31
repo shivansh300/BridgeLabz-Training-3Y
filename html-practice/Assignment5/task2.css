@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+header {
+    background-color: #1f3b4d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #ffd166;
+}
+
+section {
+    width: 100%;
+    min-height: 70vh;
+    padding: 80px 10%;
+    border-bottom: 4px solid white;
+}
+
+.content {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.hero {
+    background-image: linear-gradient(
+        135deg,
+        #0f4c75,
+        #3282b8,
+        #bbe1fa
+    );
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.about {
+    background-image: url("manali1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.places {
+    background: radial-gradient(
+        circle,
+        #fff3b0,
+        #ffcb77,
+        #e07a5f
+    );
+    display: flex;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    width: 30%;
+    background-color: white;
+    padding: 30px 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+.food {
+    background-image: url("manali2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.contact {
+    background-color: #d8f3dc;
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    background-color: #1f3b4d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    section {
+        padding: 60px 8%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .content h2 {
+        font-size: 1.8rem;
+    }
+}
