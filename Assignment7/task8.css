@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+main {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+section {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.box-model-section h2,
+.sizing-section h2 {
+    margin-bottom: 30px;
+}
+
+.margin-layer {
+    background-color: #f8c471;
+    padding: 35px;
+    outline: 3px dashed #e67e22;
+    width: 350px;
+    margin: auto;
+}
+
+.border-layer {
+    background-color: #85c1e9;
+    border: 15px solid #2874a6;
+}
+
+.padding-layer {
+    background-color: #a9dfbf;
+    padding: 30px;
+}
+
+.content-layer {
+    background-color: #f5b7b1;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.description {
+    margin-top: 35px;
+    text-align: left;
+}
+
+.description p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.comparison {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.default-box,
+.border-box {
+    width: 250px;
+    height: 180px;
+    padding: 25px;
+    border: 10px solid #3498db;
+    text-align: center;
+}
+
+.default-box {
+    box-sizing: content-box;
+    background-color: #d6eaf8;
+}
+
+.border-box {
+    box-sizing: border-box;
+    background-color: #d5f5e3;
+}
+
+.comparison h3 {
+    margin-bottom: 15px;
+}
+
+.comparison p {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 20px;
+    }
+
+    .margin-layer {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .comparison {
+        gap: 25px;
+    }
+}

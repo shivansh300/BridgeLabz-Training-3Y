@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+header {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Attribute selector: selects elements based on their attributes */
+input[type="text"] {
+    border: 2px solid #3498db;
+    padding: 12px;
+}
+
+/* Attribute selector: selects links whose href starts with "https" */
+a[href^="https"] {
+    color: green;
+    font-weight: bold;
+}
+
+/* Pseudo-class: applies style when the mouse is over an element */
+a:hover {
+    color: red;
+}
+
+/* Pseudo-class: applies style when an input is selected */
+input:focus {
+    outline: 3px solid #f1c40f;
+    background-color: #fffbea;
+}
+
+/* Pseudo-class: selects every second list item */
+li:nth-child(2) {
+    color: blue;
+    font-weight: bold;
+}
+
+/* Pseudo-element: adds content before the heading */
+.items h2::before {
+    content: "★ ";
+    color: orange;
+}
+
+/* Pseudo-element: adds content after the heading */
+.items h2::after {
+    content: " ★";
+    color: orange;
+}
+
+/* Child combinator (>): selects only direct children */
+.parent > p {
+    color: blue;
+    font-weight: bold;
+}
+
+/* Descendant combinator (space): selects all p elements inside .parent */
+.parent p {
+    background-color: #eaf2f8;
+    padding: 8px;
+}
+
+/* Adjacent sibling combinator (+): selects the first p immediately after span */
+span + p {
+    color: red;
+    font-weight: bold;
+}
+
+/* General sibling combinator (~): selects all p elements after span */
+span ~ p {
+    text-decoration: underline;
+}
+
+/* Styling form elements */
+form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #222;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+}

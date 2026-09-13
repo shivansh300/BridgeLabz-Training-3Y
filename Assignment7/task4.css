@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+header {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+main {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.card {
+    width: 280px;
+    min-height: 220px;
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 3px #aaa;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+.card-one {
+    box-shadow: 5px 5px 10px #999;
+}
+
+.card-two {
+    box-shadow: 0 8px 20px #888;
+}
+
+.card-three {
+    box-shadow: 10px 10px 25px #777;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 18px 30px #666;
+}
+
+footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+}
+
+@media (max-width: 900px) {
+    .cards {
+        flex-wrap: wrap;
+    }
+}

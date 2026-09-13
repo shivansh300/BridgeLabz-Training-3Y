@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #222;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.article {
+    background-color: white;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.article h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.article h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.article p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.intro {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.font-section,
+.style-section,
+.special-text,
+.reading-section {
+    margin-top: 30px;
+}
+
+.serif {
+    font-family: Georgia, serif;
+    font-size: 18px;
+}
+
+.sans-serif {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.monospace {
+    font-family: "Courier New", monospace;
+    font-size: 17px;
+}
+
+.normal-text {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.bold-text {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.large-text {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+mark {
+    background-color: #ffe066;
+    color: #7a5200;
+    padding: 2px 5px;
+}
+
+strong {
+    color: #c0392b;
+}
+
+em {
+    color: #8e44ad;
+}
+
+.reading-section p {
+    text-align: justify;
+    line-height: 1.9;
+    letter-spacing: 0.4px;
+}
+
+.reading-section p::first-letter {
+    font-size: 42px;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.reading-section p::first-line {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .article {
+        padding: 25px;
+    }
+
+    .article h2 {
+        font-size: 27px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}
