@@ -1,0 +1,86 @@
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.highlight {
+    background-color: #ffeaa7;
+    padding: 10px;
+    border-left: 5px solid #f39c12;
+}
+
+#special-heading {
+    color: #8e44ad;
+    text-decoration: underline;
+}
+
+a[href^="https"] {
+    color: #2980b9;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.parent p {
+    background-color: #ecf0f1;
+    padding: 10px;
+}
+
+.parent > p {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+h3 + p {
+    background-color: #d5f5e3;
+    padding: 10px;
+    border-left: 5px solid #27ae60;
+}
+
+.sibling-list li:first-child ~ li {
+    color: #2980b9;
+    font-weight: bold;
+}
+
+.selector-section {
+    background-color: white;
+    padding: 25px;
+    margin: 25px auto;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.selector-section h2 {
+    margin-bottom: 15px;
+    color: #243447;
+}
+
+.sibling-list {
+    margin-top: 20px;
+    padding-left: 25px;
+}
+
+.sibling-list li {
+    margin: 8px 0;
+}
+
+header {
+    text-align: center;
+    background-color: #243447;
+    color: white;
+    padding: 30px 20px;
+}
+
+main {
+    padding: 20px;
+    background-color: #f2f4f7;
+    min-height: 80vh;
+}
+
+footer {
+    text-align: center;
+    background-color: #243447;
+    color: white;
+    padding: 20px;
+}

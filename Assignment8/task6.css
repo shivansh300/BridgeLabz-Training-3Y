@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    background-color: #243447;
+    color: white;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.animation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.animation-box {
+    width: 260px;
+    height: 250px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.animation-box h2 {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.moving-box {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    animation-name: moveBox;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes moveBox {
+    from {
+        transform: translateX(-70px);
+    }
+
+    to {
+        transform: translateX(70px);
+    }
+}
+
+.ball {
+    width: 55px;
+    height: 55px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    animation-name: bounceBall;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 0.3s;
+}
+
+@keyframes bounceBall {
+    from {
+        transform: translateY(-50px);
+    }
+
+    to {
+        transform: translateY(50px);
+    }
+}
+
+.color-text {
+    animation-name: changeColor;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes changeColor {
+    0% {
+        color: #3498db;
+    }
+
+    50% {
+        color: #9b59b6;
+    }
+
+    100% {
+        color: #e74c3c;
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: #243447;
+    color: white;
+    padding: 20px;
+}
+
+@media (max-width: 700px) {
+    .animation-container {
+        flex-direction: column;
+    }
+}
