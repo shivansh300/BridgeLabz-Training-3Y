@@ -1,0 +1,15 @@
+.img1{
+    /* filter: brightness(10%); */
+    filter: sepia((100%));
+}
+.img2{
+    /* filter: contrast(10%); */
+    /* filter: invert(1); */
+    /* filter: opacity(); */
+}
+.img3{
+    /* filter: grayscale(100%); */
+    filter: hue-rotate(1000deg);
+    /* filter: sepia((100%)); */
+    filter: saturate(300%);
+}

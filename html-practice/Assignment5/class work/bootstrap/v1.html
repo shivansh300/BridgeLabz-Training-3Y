@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Bootstrap Demo</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="demo.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- ROW 1 -->
+    <div class="row my-custom-row justify-content-center gx-5 align-items-center">
+
+      <div class="col-sm-4">
+        <div class="p-3 border bg-light">
+          GLA
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="p-3 border bg-light">
+          BRD
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- BUTTONS -->
+    <div class="row mt-3">
+
+      <div class="col">
+        <button class="btn btn-danger">
+          Primary
+        </button>
+      </div>
+
+      <div class="col">
+        <button class="btn btn-secondary">
+          Secondary
+        </button>
+      </div>
+
+      <div class="col">
+        <button class="btn btn-secondary">
+          Secondary
+        </button>
+      </div>
+
+    </div>
+
+
+    <!-- MODAL BUTTON -->
+    <button type="button"
+            class="btn btn-primary mt-3"
+            data-bs-toggle="modal"
+            data-bs-target="#myModal">
+      Open Modal
+    </button>
+
+
+    <!-- MODAL -->
+    <div class="modal" id="myModal" tabindex="-1">
+
+      <div class="modal-dialog">
+
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title">
+              Modal title
+            </h5>
+
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+            </button>
+          </div>
+
+          <div classa="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+
+          <div class="modal-footer">
+
+            <button type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+              Close
+            </button>
+
+            <button type="button"
+                    class="btn btn-primary">
+              Save changes
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>

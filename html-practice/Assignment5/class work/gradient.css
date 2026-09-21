@@ -1,0 +1,11 @@
+.box{
+    width: 400px;
+    height: 400px;
+    /* background: linear-gradient( */
+    background: radial-gradient(rgb(118, 66, 66),rgb(83, 83, 137));
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:25px;
+}

@@ -1,0 +1,29 @@
+:root{
+    --primary-color:brown;
+    --custom-width: 330px;
+
+}
+.container{
+    background-color: beige;
+    height: 350px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    background-color: aquamarine;
+    width: var(--custom-width);
+    height:300px;
+    border: ipx solid var(--primary-color);
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 10px 15px 50px ;
+}
+head1{
+    text-align: center;
+    font-size: 30px;
+    color: brown;
+    text-shadow: 5px 10px 10px 10px black;
+}
+
