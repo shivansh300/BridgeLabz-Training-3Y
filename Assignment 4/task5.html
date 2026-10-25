@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Ticket Booking</title>
+</head>
+<body>
+    <h2>Book Movie Tickets</h2>
+
+    <form id="bookingForm" novalidate>
+        <input id="name" placeholder="Name" required>
+        <p id="nameError"></p>
+
+        <input id="email" placeholder="Email" required>
+        <p id="emailError"></p>
+
+        <input id="seats" type="number" placeholder="Seats (1-10)" required>
+        <p id="seatsError"></p>
+
+        <button type="submit">Book Tickets</button>
+    </form>
+
+    <div id="ticket"></div>
+
+    <script>
+        "use strict";
+
+        const form = document.getElementById("bookingForm");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const seats = Number(document.getElementById("seats").value);
+
+            const nameValid = /^[A-Za-z ]+$/.test(name);
+            const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            const seatsValid = Number.isInteger(seats) && seats >= 1 && seats <= 10;
+
+            document.getElementById("nameError").textContent =
+                nameValid ? "" : "Enter a name using alphabets only.";
+
+            document.getElementById("emailError").textContent =
+                emailValid ? "" : "Enter a valid email.";
+
+            document.getElementById("seatsError").textContent =
+                seatsValid ? "" : "Seats must be between 1 and 10.";
+
+            if (nameValid && emailValid && seatsValid) {
+                const booking = { name, email, seats };
+
+                document.getElementById("ticket").textContent =
+                    `Booking Confirmed! Name: ${booking.name}, Email: ${booking.email}, Seats: ${booking.seats}`;
+
+                console.log(booking);
+            } else {
+                document.getElementById("ticket").textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>

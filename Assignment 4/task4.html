@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Form Builder</title>
+</head>
+<body>
+    <h2>Dynamic Form</h2>
+    <div id="formContainer"></div>
+    <pre id="output"></pre>
+
+    <script>
+        "use strict";
+
+        class FormBuilder {
+            constructor(fields, containerId) {
+                this.fields = fields;
+                this.container = document.getElementById(containerId);
+            }
+
+            createForm() {
+                const form = document.createElement("form");
+
+                this.fields.forEach((field, index) => {
+                    const label = document.createElement("label");
+                    label.textContent = field.label;
+                    label.htmlFor = `field${index}`;
+
+                    const input = document.createElement("input");
+                    input.type = field.type;
+                    input.id = `field${index}`;
+                    input.name = field.name;
+                    input.required = true;
+
+                    form.append(label, input, document.createElement("br"));
+                });
+
+                const button = document.createElement("button");
+                button.type = "submit";
+                button.textContent = "Submit";
+                form.appendChild(button);
+
+                form.addEventListener("submit", event => {
+                    event.preventDefault();
+                    document.getElementById("output").textContent =
+                        JSON.stringify(this.getFormData(), null, 2);
+                });
+
+                this.container.replaceChildren(form);
+            }
+
+            getFormData() {
+                const data = {};
+
+                this.fields.forEach((field, index) => {
+                    data[field.name] =
+                        document.getElementById(`field${index}`).value;
+                });
+
+                return data;
+            }
+        }
+
+        const fields = [
+            { type: "text", label: "Username", name: "username" },
+            { type: "email", label: "Email", name: "email" },
+            { type: "password", label: "Password", name: "password" }
+        ];
+
+        const builder = new FormBuilder(fields, "formContainer");
+        builder.createForm();
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Object Updater</title>
+</head>
+<body>
+    <h2>Edit User Details</h2>
+
+    <form id="userForm">
+        <input id="name" placeholder="Name" required>
+        <br><br>
+
+        <input id="email" type="email" placeholder="Email" required>
+        <br><br>
+
+        <input id="age" type="number" min="1" placeholder="Age" required>
+        <br><br>
+
+        <button type="submit">Update User</button>
+    </form>
+
+    <h3>Updated User</h3>
+    <pre id="output"></pre>
+
+    <script>
+        "use strict";
+
+        const user = {
+            name: "John",
+            email: "john@mail.com",
+            age: 21
+        };
+
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const ageInput = document.getElementById("age");
+        const output = document.getElementById("output");
+
+        nameInput.value = user.name;
+        emailInput.value = user.email;
+        ageInput.value = user.age;
+
+        output.textContent = JSON.stringify(user, null, 2);
+
+        document.getElementById("userForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            user.name = nameInput.value.trim();
+            user.email = emailInput.value.trim();
+            user.age = Number(ageInput.value);
+
+            output.textContent = JSON.stringify(user, null, 2);
+
+            console.log("Updated User:", user);
+        });
+    </script>
+</body>
+</html>

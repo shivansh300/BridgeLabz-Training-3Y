@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Form Validator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 30px auto;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+        }
+
+        .valid {
+            border-color: green;
+        }
+
+        .invalid {
+            border-color: red;
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Registration</h2>
+
+    <form id="studentForm" novalidate>
+        <input id="name" placeholder="Name">
+        <div id="nameError" class="error"></div>
+
+        <input id="email" placeholder="Email">
+        <div id="emailError" class="error"></div>
+
+        <input id="phone" placeholder="10-digit Phone">
+        <div id="phoneError" class="error"></div>
+
+        <input id="password" type="password" placeholder="Password">
+        <div id="passwordError" class="error"></div>
+
+        <button type="submit">Register</button>
+        <p id="result"></p>
+    </form>
+
+    <script>
+        "use strict";
+
+        const form = document.getElementById("studentForm");
+
+        const rules = {
+            name: /^[A-Za-z]+$/,
+            email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            phone: /^\d{10}$/,
+            password: /^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9\s]).+$/
+        };
+
+        const messages = {
+            name: "Name must contain alphabets only.",
+            email: "Enter a valid email address.",
+            phone: "Phone must contain exactly 10 digits.",
+            password: "Password needs an uppercase letter, a number and a special character."
+        };
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let allValid = true;
+
+            for (const field in rules) {
+                const input = document.getElementById(field);
+                const error = document.getElementById(field + "Error");
+                const valid = rules[field].test(input.value.trim());
+
+                input.className = valid ? "valid" : "invalid";
+                error.textContent = valid ? "" : messages[field];
+
+                if (!valid) {
+                    allValid = false;
+                }
+            }
+
+            document.getElementById("result").textContent =
+                allValid ? "Registration successful!" : "Please correct the errors.";
+        });
+    </script>
+</body>
+</html>
