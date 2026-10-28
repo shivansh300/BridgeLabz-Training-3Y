@@ -33,6 +33,3 @@ async function runPipeline() {
 
 runPipeline();
 
-// Each await pauses this async function until its Promise settles.
-// The event loop can process other tasks while a timer is pending.
-// If any step rejects, execution jumps to catch and later steps are skipped.
